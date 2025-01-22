@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (inputDirection != Vector2.zero)
         {
             moveVector = inputDirection;
-            lastMoveVector = moveVector;
+            lastMoveVector = moveVector.normalized;
         }
         else
         {
