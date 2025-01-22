@@ -16,6 +16,7 @@ public class QuestUI : MonoBehaviour
 
     public void UpdateQuestList()
     {
+        // Update the quest list text with information from the quest data.
         questListText.text = "Active Quests:\n";
         foreach (Quest quest in questManager.GetActiveQuests())
         {
@@ -25,6 +26,7 @@ public class QuestUI : MonoBehaviour
 
     public IEnumerator DisplayCompletion()
     {
+        // Display a message when quest is completed.
         questListText.text = "Quest completed, you earned 5 gold!";
         yield return new WaitForSeconds(3f);
         UpdateQuestList();

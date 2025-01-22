@@ -6,6 +6,7 @@ public class QuestGiver : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Trigger zone to complete quest, used to turn in quest.
         if (other.CompareTag("Player"))
         {
             QuestManager questManager = FindObjectOfType<QuestManager>();

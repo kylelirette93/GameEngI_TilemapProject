@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Expose fields in inspector.
 [System.Serializable]
 public class Quest
 {
+    // Quest data.
     public string title;
     public string description;
     public int collected = 0;
@@ -12,6 +14,7 @@ public class Quest
     public int reward;
     public bool isCompleted;
 
+    // Constructor for quest. Pass values when initializing a new quest.
     public Quest(string title, string description, int condition, int reward)
     {
         this.title = title;
@@ -23,6 +26,7 @@ public class Quest
 
     public void CompleteQuest()
     {
+        // Check if the quest is completed.
         if (collected == condition)
         {
             isCompleted = true;
